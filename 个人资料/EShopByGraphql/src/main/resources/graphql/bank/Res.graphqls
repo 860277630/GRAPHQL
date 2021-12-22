@@ -1,0 +1,7 @@
+scalar NonNegativeInt
+
+
+type R{
+    code :NonNegativeInt
+    msg  :String
+}

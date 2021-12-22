@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<h1>这个页面用来测试graphql结合页面来做</h1>
+<h1>这里讲一下思路</h1>
+<h1>用js或者html来模拟对后台的请求，后台不需要解析，统一由graphql进行处理</h1>
+<h1>例子（用于postman）：curl 'http://localhost:8099/graphql' \
+    -H 'Connection: keep-alive' \
+    -H 'accept: */*' \
+    -H 'Authorization: Bearer TOKEN_XYZ' \
+    -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36' \
+    -H 'content-type: application/json' \
+    -H 'Origin: http://localhost:8099' \
+    -H 'Sec-Fetch-Site: same-origin' \
+    -H 'Sec-Fetch-Mode: cors' \
+    -H 'Sec-Fetch-Dest: empty' \
+    -H 'Referer: http://localhost:8099/playground' \
+    -H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8' \
+    --data-binary '{"operationName":"QUERY_OP","variables":{"num":15},"query":"query QUERY_OP {\n  getOrders {\n    msg\n  }\n}\n"}' \
+    --compressed</h1>
+</body>
+</html>

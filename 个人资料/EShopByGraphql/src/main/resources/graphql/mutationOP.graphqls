@@ -1,0 +1,4 @@
+# 该服务器支持的所有查询   对应的类MutationOPResolver  实现GraphQLMutationResolver接口
+type Mutation {
+    createOrdes(num:NonNegativeInt ):R
+}

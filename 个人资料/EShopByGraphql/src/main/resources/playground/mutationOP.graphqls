@@ -1,0 +1,15 @@
+# 查询样例，playground前端的默认显示
+#下面的ID位于json中
+mutation MUTATION_OP($num: NonNegativeInt) {
+    #调用query.graphqls里面的方法进行
+    #如果要调用其他的  需要手写在play ground里面
+#    bankAccount(id: $num) {
+#        name
+#    }
+
+    #然后着手加  增加操作
+
+    createOrdes(num: $num) {
+            msg
+        }
+}

@@ -1,0 +1,5 @@
+query QUERY_OP{
+    getOrders {
+        msg
+    }
+}

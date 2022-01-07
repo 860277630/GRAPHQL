@@ -1,0 +1,30 @@
+# 定义一个查询类型
+# 继承QueryBySelf  即里面的都是同QueryBySelf一样的query类型
+extend type QueryBySelf {
+    queryItemList: ItemList  # 定义查询项目列表
+    queryById(id: ID): Item
+}
+
+# 继承MutationBySelf  即里面的都是同MutationBySelf一样的mutation类型
+extend type MutationBySelf {
+    updateName(param: Param): Item
+}
+
+# 定义项目字段
+type Item {
+    id: ID!
+    code: String!
+    name: String!
+    createTime: Long
+    searchDate: Date
+}
+
+type ItemList {
+    itemList: [Item!]!  #获取项目列表
+    total: Int!      # 获取项目总数
+}
+
+input Param {
+    id: ID!
+    name: String!
+}

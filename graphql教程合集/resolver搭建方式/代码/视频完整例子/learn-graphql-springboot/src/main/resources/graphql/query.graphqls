@@ -1,0 +1,4 @@
+# 该服务器支持的所有查询
+type Query {
+    bankAccount(id: ID): BankAccount
+}

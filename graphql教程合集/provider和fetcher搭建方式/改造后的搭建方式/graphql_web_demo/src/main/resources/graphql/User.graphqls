@@ -1,0 +1,48 @@
+#参考网址   https://blog.csdn.net/qq_40794266/article/details/102972273
+
+
+#声明自定义类型 有ExtendedScalars包括的  也有  自定义的类
+scalar SelfMap
+scalar MyDateTime
+scalar Long
+schema {
+    query: UserQuery
+}
+
+
+
+type UserQuery {
+    user(id:Long) : User
+    card(id:Long) : Card
+    baseType : String
+    baseTypes:[String]
+    testExtend:SonDemo  #测试继承关系
+    testInputBean(input:InputBean):String  #测试入参是封装好的Bean
+    testSelfType(num:Long,myDateTime:MyDateTime):SelfMap #测试自定义类型
+}
+type Card{
+    id:Long
+    address:String
+}
+type User{
+    id:Long!
+    name:String
+    age:Int
+    card:Card
+    cards:[Card]
+}
+
+#在有继承关系的对象中  代码中该怎样写怎样写  该继承继承  但是  graphqls文件中 只写子类  且子类包含子类及父类的所有属性
+#并且代码中的tostring  要重写  要返回父类的值
+type SonDemo{
+    id:String
+    name:String
+    address:String
+    firstName:String
+    IS_LAST:String
+}
+
+input InputBean{
+    id:String
+    name:String
+}

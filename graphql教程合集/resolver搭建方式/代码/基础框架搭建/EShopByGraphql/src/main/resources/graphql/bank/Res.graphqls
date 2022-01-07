@@ -1,0 +1,8 @@
+#声明自定义的扩展类型
+scalar NonNegativeInt
+scalar SelfMap
+
+type R{
+    code :NonNegativeInt
+    msg  :String
+}

@@ -1,0 +1,23 @@
+schema {
+    # 查询
+    query: QueryBySelf
+    # 更新
+    mutation: MutationBySelf
+}
+
+type QueryBySelf {
+    version: String
+}
+
+type MutationBySelf {
+    version: String
+}
+
+# 自定义标量类型：Long
+scalar Long
+
+# 自定义日期类型，日期格式 yyyy-MM-dd HH:mm:ss
+scalar Date
+
+#ExtendedScalars  定义的快捷扩展类
+scalar NonNegativeInt

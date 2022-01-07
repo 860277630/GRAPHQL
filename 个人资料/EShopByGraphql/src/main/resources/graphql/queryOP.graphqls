@@ -1,6 +1,0 @@
-# 该服务器支持的所有查询   对应的类BankAccountResolver  实现GraphQLQueryResolver接口
-
-type Query {
-    #查询所有订单的信息  对于不全的信息  给与提示
-    getOrders: R
-}

@@ -1,6 +1,0 @@
-scalar NonNegativeInt
-
-input CreateBankAccountInput {
-    firstName: String!
-    age: NonNegativeInt
-}

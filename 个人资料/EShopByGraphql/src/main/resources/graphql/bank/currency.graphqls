@@ -1,5 +1,0 @@
-# 支持的币种
-enum Currency {
-    RMB,
-    USD
-}
